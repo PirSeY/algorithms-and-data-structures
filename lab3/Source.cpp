@@ -10,7 +10,7 @@ namespace TestEffect
 	INT_64 lrand() { return rand() << 16 | rand(); }
 }
 //---------------------------------------------------------------------------
-//Ìåíþ
+//ÃŒÃ¥Ã­Ã¾
 void main() {
 	T23<int, int> tree;
 	T23<int, int>::Iterator it = T23<int, int>::Iterator(&tree);
@@ -18,17 +18,17 @@ void main() {
 	setlocale(LC_ALL, "RUS");
 	while (true)
 	{
-		cout << "1. Ïðîñìîòð äåðåâà" << endl;
-		cout << "2. Î÷èñòêà äåðåâà" << endl;
-		cout << "3. Ïðîâåðêà íà ïóñòîòó" << endl;
-		cout << "4. Ïîèñê äàííûõ ñ çàäàííûì êëþ÷îì" << endl;
-		cout << "5. Äîáàâëåíèå äàííûõ ñ çàäàííûì êëþ÷îì" << endl;
-		cout << "6. Óäàëåíèå äàííûõ ñ çàäàííûì êëþ÷îì" << endl;
-		cout << "7. Îïðîñ ðàçìåðà äåðåâà" << endl;
-		cout << "8. Èòåðàòîð" << endl;
-		cout << "9. Îáðàòíûé èòåðàòîð" << endl;
-		cout << "10. Òåñòèðîâàíèå (ñëó÷àéíîå)" << endl;
-		cout << "11. Òåñòèðîâàíèå (âûðîæäåííîå)" << endl;
+		cout << "1. ÃÃ°Ã®Ã±Ã¬Ã®Ã²Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã " << endl;
+		cout << "2. ÃŽÃ·Ã¨Ã±Ã²ÃªÃ  Ã¤Ã¥Ã°Ã¥Ã¢Ã " << endl;
+		cout << "3. ÃÃ°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã­Ã  Ã¯Ã³Ã±Ã²Ã®Ã²Ã³" << endl;
+		cout << "4. ÃÃ®Ã¨Ã±Ãª Ã¤Ã Ã­Ã­Ã»Ãµ Ã± Ã§Ã Ã¤Ã Ã­Ã­Ã»Ã¬ ÃªÃ«Ã¾Ã·Ã®Ã¬" << endl;
+		cout << "5. Ã„Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¥ Ã¤Ã Ã­Ã­Ã»Ãµ Ã± Ã§Ã Ã¤Ã Ã­Ã­Ã»Ã¬ ÃªÃ«Ã¾Ã·Ã®Ã¬" << endl;
+		cout << "6. Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥ Ã¤Ã Ã­Ã­Ã»Ãµ Ã± Ã§Ã Ã¤Ã Ã­Ã­Ã»Ã¬ ÃªÃ«Ã¾Ã·Ã®Ã¬" << endl;
+		cout << "7. ÃŽÃ¯Ã°Ã®Ã± Ã°Ã Ã§Ã¬Ã¥Ã°Ã  Ã¤Ã¥Ã°Ã¥Ã¢Ã " << endl;
+		cout << "8. ÃˆÃ²Ã¥Ã°Ã Ã²Ã®Ã°" << endl;
+		cout << "9. ÃŽÃ¡Ã°Ã Ã²Ã­Ã»Ã© Ã¨Ã²Ã¥Ã°Ã Ã²Ã®Ã°" << endl;
+		cout << "10. Ã’Ã¥Ã±Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ (Ã±Ã«Ã³Ã·Ã Ã©Ã­Ã®Ã¥)" << endl;
+		cout << "11. Ã’Ã¥Ã±Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã¨Ã¥ (Ã¢Ã»Ã°Ã®Ã¦Ã¤Ã¥Ã­Ã­Ã®Ã¥)" << endl;
 		int n = 0;
 		int t;
 		int value, key;
@@ -45,14 +45,14 @@ void main() {
 			_getch();
 			break;
 		case 3:
-			cout << "Ïóñòîòà äåðåâà: " << tree.IsEmpty() << endl;
+			cout << "ÃÃ³Ã±Ã²Ã®Ã²Ã  Ã¤Ã¥Ã°Ã¥Ã¢Ã : " << tree.IsEmpty() << endl;
 			_getch();
 			break;
 		case 4:
 			cin >> key;
 			try
 			{
-				cout << "Íàéäåííîå çíà÷åíèå: " << tree.GetData(key) << endl;
+				cout << "ÃÃ Ã©Ã¤Ã¥Ã­Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥: " << tree.GetData(key) << endl;
 			}
 			catch (TreeException e)
 			{
@@ -63,33 +63,33 @@ void main() {
 		case 5:
 			cin >> key;
 			cin >> value;
-			cout << "Ñòàòóñ îïåðàöèè âñòàâêà: " << tree.Insert(key, value) << endl;
+			cout << "Ã‘Ã²Ã Ã²Ã³Ã± Ã®Ã¯Ã¥Ã°Ã Ã¶Ã¨Ã¨ Ã¢Ã±Ã²Ã Ã¢ÃªÃ : " << tree.Insert(key, value) << endl;
 			tree.Show();
 
 			_getch();
 			break;
 		case 6:
 			cin >> key;
-			cout << "Ñòàòóñ îïåðàöèè óäàëåíèå: " << tree.Delete(key) << endl;
+			cout << "Ã‘Ã²Ã Ã²Ã³Ã± Ã®Ã¯Ã¥Ã°Ã Ã¶Ã¨Ã¨ Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥: " << tree.Delete(key) << endl;
 			tree.Show();
 
 			_getch();
 			break;
 		case 7:
-			cout << "Ðàçìåð äåðåâà: " << tree.GetSize() << endl;
+			cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã : " << tree.GetSize() << endl;
 			_getch();
 			break;
 		case 8: {
 			system("cls");
 			bool exit = false;
 			while (!exit) {
-				cout << "1. Ïðîñìîòð òåêóùåãî" << endl;
-				cout << "2. Óñòàíîâêà íà ïåðâûé" << endl;
-				cout << "3. Óñòàíîâêà íà ïîñëåíäíèé" << endl;
-				cout << "4. Ñëåäóþùèé" << endl;
-				cout << "5. Ïðåäûäóùèé" << endl;
-				cout << "6. Ïðîâåðêà ñîñòîÿíèÿ" << endl;
-				cout << "7. Èçìåíåíèå äàííûõ" << endl;
+				cout << "1. ÃÃ°Ã®Ã±Ã¬Ã®Ã²Ã° Ã²Ã¥ÃªÃ³Ã¹Ã¥Ã£Ã®" << endl;
+				cout << "2. Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã­Ã  Ã¯Ã¥Ã°Ã¢Ã»Ã©" << endl;
+				cout << "3. Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã­Ã  Ã¯Ã®Ã±Ã«Ã¥Ã­Ã¤Ã­Ã¨Ã©" << endl;
+				cout << "4. Ã‘Ã«Ã¥Ã¤Ã³Ã¾Ã¹Ã¨Ã©" << endl;
+				cout << "5. ÃÃ°Ã¥Ã¤Ã»Ã¤Ã³Ã¹Ã¨Ã©" << endl;
+				cout << "6. ÃÃ°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã±Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¿" << endl;
+				cout << "7. ÃˆÃ§Ã¬Ã¥Ã­Ã¥Ã­Ã¨Ã¥ Ã¤Ã Ã­Ã­Ã»Ãµ" << endl;
 
 				int it_t;
 				cin >> it_t;
@@ -142,13 +142,13 @@ void main() {
 			system("cls");
 			bool exit = false;
 			while (!exit) {
-				cout << "1. Ïðîñìîòð òåêóùåãî" << endl;
-				cout << "2. Óñòàíîâêà íà ïåðâûé" << endl;
-				cout << "3. Óñòàíîâêà íà ïîñëåíäíèé" << endl;
-				cout << "4. Ñëåäóþùèé" << endl;
-				cout << "5. Ïðåäûäóùèé" << endl;
-				cout << "6. Ïðîâåðêà ñîñòîÿíèÿ" << endl;
-				cout << "7. Èçìåíåíèå äàííûõ" << endl;
+				cout << "1. ÃÃ°Ã®Ã±Ã¬Ã®Ã²Ã° Ã²Ã¥ÃªÃ³Ã¹Ã¥Ã£Ã®" << endl;
+				cout << "2. Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã­Ã  Ã¯Ã¥Ã°Ã¢Ã»Ã©" << endl;
+				cout << "3. Ã“Ã±Ã²Ã Ã­Ã®Ã¢ÃªÃ  Ã­Ã  Ã¯Ã®Ã±Ã«Ã¥Ã­Ã¤Ã­Ã¨Ã©" << endl;
+				cout << "4. Ã‘Ã«Ã¥Ã¤Ã³Ã¾Ã¹Ã¨Ã©" << endl;
+				cout << "5. ÃÃ°Ã¥Ã¤Ã»Ã¤Ã³Ã¹Ã¨Ã©" << endl;
+				cout << "6. ÃÃ°Ã®Ã¢Ã¥Ã°ÃªÃ  Ã±Ã®Ã±Ã²Ã®Ã¿Ã­Ã¨Ã¿" << endl;
+				cout << "7. ÃˆÃ§Ã¬Ã¥Ã­Ã¥Ã­Ã¨Ã¥ Ã¤Ã Ã­Ã­Ã»Ãµ" << endl;
 
 				int it_t;
 				cin >> it_t;
@@ -199,12 +199,12 @@ void main() {
 				break;
 		case 10:
 			int n;
-			cout << "Ââåäèòå ðàçìåð äåðåâà:" << endl;
+			cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã :" << endl;
 			cin >> n;
 			TestEffect::test_rand(n);
 			break;
 		case 11:
-			cout << "Ââåäèòå ðàçìåð äåðåâà:" << endl;
+			cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã :" << endl;
 			cin >> n;
 			TestEffect::test_sort(n);
 			break;
@@ -225,7 +225,7 @@ void TestEffect::test_rand(int n)
 		tree.Insert(m[i], 1);
 	}
 	tree.getCountNodesView();
-	cout << "Ðàçìåð äåðåâà äî: " << tree.GetSize() << endl;
+	cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã  Ã¤Ã®: " << tree.GetSize() << endl;
 
 	double I = 0;
 	double D = 0;
@@ -263,12 +263,12 @@ void TestEffect::test_rand(int n)
 		}
 
 
-	cout << "Ðàçìåð äåðåâà ïîñëå: " << tree.GetSize() << endl;
+	cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã  Ã¯Ã®Ã±Ã«Ã¥: " << tree.GetSize() << endl;
 	cout << "log2(n)=" << (log((double)n) / log(2.0)) << endl;
 	cout << "log3(n)=" << (log((double)n) / log(3.0)) << endl;
-	cout << "Âñòàâêà: " << I / (n / 2) << endl;
-	cout << "Óäàëåíèå: " << D / (n / 2) << endl;
-	cout << "Ïîèñê: " << S / (n / 2) << endl;
+	cout << "Ã‚Ã±Ã²Ã Ã¢ÃªÃ : " << I / (n / 2) << endl;
+	cout << "Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥: " << D / (n / 2) << endl;
+	cout << "ÃÃ®Ã¨Ã±Ãª: " << S / (n / 2) << endl;
 	delete[] m;
 }
 
@@ -285,7 +285,7 @@ void TestEffect::test_sort(int n)
 	double I = 0;
 	double D = 0;
 	double S = 0;
-	cout << "Ðàçìåð äåðåâà äî: " << tree.GetSize() << endl;
+	cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã  Ã¤Ã®: " << tree.GetSize() << endl;
 	for (int i = 0; i < n / 2; i++)
 	{
 		if (i % 10 == 0)
@@ -323,11 +323,11 @@ void TestEffect::test_sort(int n)
 
 		}
 	}
-	cout << "Ðàçìåð äåðåâà ïîñëå: " << tree.GetSize() << endl;
+	cout << "ÃÃ Ã§Ã¬Ã¥Ã° Ã¤Ã¥Ã°Ã¥Ã¢Ã  Ã¯Ã®Ã±Ã«Ã¥: " << tree.GetSize() << endl;
 	cout << "log2(n)=" << (log((double)n) / log(2.0)) << endl;
 	cout << "log3(n)=" << (log((double)n) / log(3.0)) << endl;
-	cout << "Âñòàâêà: " << I / (n / 2) << endl;
-	cout << "Óäàëåíèå: " << D / (n / 2) << endl;
-	cout << "Ïîèñê: " << S / (n / 2) << endl;
+	cout << "Ã‚Ã±Ã²Ã Ã¢ÃªÃ : " << I / (n / 2) << endl;
+	cout << "Ã“Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¥: " << D / (n / 2) << endl;
+	cout << "ÃÃ®Ã¨Ã±Ãª: " << S / (n / 2) << endl;
 	delete[] m;
 }
