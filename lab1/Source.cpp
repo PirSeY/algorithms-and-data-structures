@@ -13,24 +13,24 @@ void loop() {
 	int position;
 	bool flag = 1;
 	while (flag) {
-		cout << "Внимание! Нумерация в списке начинается с 1!" << endl;
-		cout << "0 - выход" << endl;
-		cout << "1 - вставить" << endl;
-		cout << "2 - вставить на позицию" << endl;
-		cout << "3 - удалить элемент" << endl;
-		cout << "4 - удалить с позиции" << endl;
-		cout << "5 - вывести на экран" << endl;
-		cout << "6 - изменить" << endl;
-		cout << "7 - позиция элемента" << endl;
-		cout << "8 - получить элемент по позиции" << endl;
-		cout << "9 - наличие элемента в списке" << endl;
-		cout << "10 - пустой ли список" << endl;
-		cout << "11 - размер списка" << endl;
-		cout << "12 - очистка списка" << endl;
-		cout << "13 - вызов итератора" << endl;
+		cout << "Г‚Г­ГЁГ¬Г Г­ГЁГҐ! ГЌГіГ¬ГҐГ°Г Г¶ГЁГї Гў Г±ГЇГЁГ±ГЄГҐ Г­Г Г·ГЁГ­Г ГҐГІГ±Гї Г± 1!" << endl;
+		cout << "0 - ГўГ»ГµГ®Г¤" << endl;
+		cout << "1 - ГўГ±ГІГ ГўГЁГІГј" << endl;
+		cout << "2 - ГўГ±ГІГ ГўГЁГІГј Г­Г  ГЇГ®Г§ГЁГ¶ГЁГѕ" << endl;
+		cout << "3 - ГіГ¤Г Г«ГЁГІГј ГЅГ«ГҐГ¬ГҐГ­ГІ" << endl;
+		cout << "4 - ГіГ¤Г Г«ГЁГІГј Г± ГЇГ®Г§ГЁГ¶ГЁГЁ" << endl;
+		cout << "5 - ГўГ»ГўГҐГ±ГІГЁ Г­Г  ГЅГЄГ°Г Г­" << endl;
+		cout << "6 - ГЁГ§Г¬ГҐГ­ГЁГІГј" << endl;
+		cout << "7 - ГЇГ®Г§ГЁГ¶ГЁГї ГЅГ«ГҐГ¬ГҐГ­ГІГ " << endl;
+		cout << "8 - ГЇГ®Г«ГіГ·ГЁГІГј ГЅГ«ГҐГ¬ГҐГ­ГІ ГЇГ® ГЇГ®Г§ГЁГ¶ГЁГЁ" << endl;
+		cout << "9 - Г­Г Г«ГЁГ·ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ  Гў Г±ГЇГЁГ±ГЄГҐ" << endl;
+		cout << "10 - ГЇГіГ±ГІГ®Г© Г«ГЁ Г±ГЇГЁГ±Г®ГЄ" << endl;
+		cout << "11 - Г°Г Г§Г¬ГҐГ° Г±ГЇГЁГ±ГЄГ " << endl;
+		cout << "12 - Г®Г·ГЁГ±ГІГЄГ  Г±ГЇГЁГ±ГЄГ " << endl;
+		cout << "13 - ГўГ»Г§Г®Гў ГЁГІГҐГ°Г ГІГ®Г°Г " << endl;
 		cin >> parameter;
 		if (parameter > 13 || parameter < 0) {
-			cout << "Неправильный выбор" << endl;
+			cout << "ГЌГҐГЇГ°Г ГўГЁГ«ГјГ­Г»Г© ГўГ»ГЎГ®Г°" << endl;
 			cin.get();
 			cin.get();
 			continue;
@@ -41,12 +41,12 @@ void loop() {
 			flag = 0;
 			break;
 		case 1: // insert
-			cout << "Введите элемент" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ" << endl;
 			cin >> el;
 			list.insert(el);
 			break;
 		case 2: // insert pos
-			cout << "Введите элемент и позицию" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁ ГЇГ®Г§ГЁГ¶ГЁГѕ" << endl;
 			cin >> el >> parameter;
 			try {
 				list.insert(el, parameter);
@@ -58,7 +58,7 @@ void loop() {
 			}
 			break;
 		case 3: // remove
-			cout << "Введите элемент" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ" << endl;
 			cin >> el;
 			try {
 				list.remove(el);
@@ -70,7 +70,7 @@ void loop() {
 			}
 			break;
 		case 4: // remove pos
-			cout << "Введите позицию" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЇГ®Г§ГЁГ¶ГЁГѕ" << endl;
 			cin >> parameter;
 			try {
 				list.remove_from(parameter);
@@ -92,7 +92,7 @@ void loop() {
 			cin.get();
 			break;
 		case 6: // change         
-			cout << "Введите элемент и позицию" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЁ ГЇГ®Г§ГЁГ¶ГЁГѕ" << endl;
 			cin >> el >> parameter;
 			try {
 				list.change(el, parameter);
@@ -104,7 +104,7 @@ void loop() {
 			}
 			break;
 		case 7: // position        
-			cout << "Введите элемент" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ" << endl;
 			cin >> el;
 			try {
 				cout << list.position(el);
@@ -116,7 +116,7 @@ void loop() {
 			cin.get();
 			break;
 		case 8: // get              
-			cout << "Введите позицию" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЇГ®Г§ГЁГ¶ГЁГѕ" << endl;
 			cin >> parameter;
 			try {
 				cout << list.get(parameter) << endl;
@@ -128,65 +128,65 @@ void loop() {
 			cin.get();
 			break;
 		case 9: // contains
-			cout << "Введите элемент" << endl;
+			cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІ" << endl;
 			cin >> el;
 			result = list.contains(el);
-			if (result == true) cout << "Содержит" << endl;
-			else cout << "Не содержит" << endl;
+			if (result == true) cout << "Г‘Г®Г¤ГҐГ°Г¦ГЁГІ" << endl;
+			else cout << "ГЌГҐ Г±Г®Г¤ГҐГ°Г¦ГЁГІ" << endl;
 			cin.get();
 			cin.get();
 			break;
 		case 10: // is empty
 			result = list.isEmpty();
-			if (result == 1) cout << "Список путой" << endl;
-			else cout << "Список не пустой" << endl;
+			if (result == 1) cout << "Г‘ГЇГЁГ±Г®ГЄ ГЇГіГІГ®Г©" << endl;
+			else cout << "Г‘ГЇГЁГ±Г®ГЄ Г­ГҐ ГЇГіГ±ГІГ®Г©" << endl;
 			cin.get();
 			cin.get();
 			break;
 		case 11: // size
-			cout << "Размер списка= " << list.size() << endl;
+			cout << "ГђГ Г§Г¬ГҐГ° Г±ГЇГЁГ±ГЄГ = " << list.size() << endl;
 			cin.get();
 			cin.get();
 			break;
 		case 12://clear list
 			list.clear();
-			cout << "Список очищен" << endl;
+			cout << "Г‘ГЇГЁГ±Г®ГЄ Г®Г·ГЁГ№ГҐГ­" << endl;
 			cin.get();
 			cin.get();
 			break;
 		case 13:
-			List <string>::Iterator iter = list.begin();//Создаем итератор
+			List <string>::Iterator iter = list.begin();//Г‘Г®Г§Г¤Г ГҐГ¬ ГЁГІГҐГ°Г ГІГ®Г°
 			List <string>::Iterator iterEnd = list.end();
 			int exit = 1;
 			int nom;
 			string h;
 			while (exit) {
-				cout << "Меню" << endl;
-				cout << "Для установки итератора в начало списка нажмите 1" << endl;
-				cout << "Для создания итератора end() нажмите 2" << endl;
-				cout << "Для вывода элемента,на который указывает итератор, нажмите 3" << endl;
-				cout << "Для передвижения итератора вперёд нажмите 4" << endl;
-				cout << "Для передвижения итератора назад нажмите 5" << endl;
-				cout << "Для задания значения итератору нажмите 6" << endl;
-				cout << "Для сравнения с итератором end() нажмите 7" << endl;
-				cout << "Для выхода нажмите 8" << endl;
+				cout << "ГЊГҐГ­Гѕ" << endl;
+				cout << "Г„Г«Гї ГіГ±ГІГ Г­Г®ГўГЄГЁ ГЁГІГҐГ°Г ГІГ®Г°Г  Гў Г­Г Г·Г Г«Г® Г±ГЇГЁГ±ГЄГ  Г­Г Г¦Г¬ГЁГІГҐ 1" << endl;
+				cout << "Г„Г«Гї Г±Г®Г§Г¤Г Г­ГЁГї ГЁГІГҐГ°Г ГІГ®Г°Г  end() Г­Г Г¦Г¬ГЁГІГҐ 2" << endl;
+				cout << "Г„Г«Гї ГўГ»ГўГ®Г¤Г  ГЅГ«ГҐГ¬ГҐГ­ГІГ ,Г­Г  ГЄГ®ГІГ®Г°Г»Г© ГіГЄГ Г§Г»ГўГ ГҐГІ ГЁГІГҐГ°Г ГІГ®Г°, Г­Г Г¦Г¬ГЁГІГҐ 3" << endl;
+				cout << "Г„Г«Гї ГЇГҐГ°ГҐГ¤ГўГЁГ¦ГҐГ­ГЁГї ГЁГІГҐГ°Г ГІГ®Г°Г  ГўГЇГҐГ°ВёГ¤ Г­Г Г¦Г¬ГЁГІГҐ 4" << endl;
+				cout << "Г„Г«Гї ГЇГҐГ°ГҐГ¤ГўГЁГ¦ГҐГ­ГЁГї ГЁГІГҐГ°Г ГІГ®Г°Г  Г­Г Г§Г Г¤ Г­Г Г¦Г¬ГЁГІГҐ 5" << endl;
+				cout << "Г„Г«Гї Г§Г Г¤Г Г­ГЁГї Г§Г­Г Г·ГҐГ­ГЁГї ГЁГІГҐГ°Г ГІГ®Г°Гі Г­Г Г¦Г¬ГЁГІГҐ 6" << endl;
+				cout << "Г„Г«Гї Г±Г°Г ГўГ­ГҐГ­ГЁГї Г± ГЁГІГҐГ°Г ГІГ®Г°Г®Г¬ end() Г­Г Г¦Г¬ГЁГІГҐ 7" << endl;
+				cout << "Г„Г«Гї ГўГ»ГµГ®Г¤Г  Г­Г Г¦Г¬ГЁГІГҐ 8" << endl;
 				cin >> nom;
 				if (nom > 8 || nom < 1) {
-					cout << "Неправильный выбор" << endl;
+					cout << "ГЌГҐГЇГ°Г ГўГЁГ«ГјГ­Г»Г© ГўГ»ГЎГ®Г°" << endl;
 					cin.get();
 					continue;
 				}
 				switch (nom) {
 				case 1:
 					iter = list.begin();
-					cout << "Итератор установлен на начало списка" << endl;
+					cout << "Г€ГІГҐГ°Г ГІГ®Г° ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­ Г­Г  Г­Г Г·Г Г«Г® Г±ГЇГЁГ±ГЄГ " << endl;
 					cin.get();
 					cin.get();
 					break;
 
 				case 2:
 					iter = list.end();
-					cout << "Создан итератор end()" << endl;
+					cout << "Г‘Г®Г§Г¤Г Г­ ГЁГІГҐГ°Г ГІГ®Г° end()" << endl;
 					cin.get();
 					cin.get();
 					break;
@@ -194,7 +194,7 @@ void loop() {
 				case 3:
 					try {
 						cout << *iter;
-						cout << "- На этот элемент указывает итератор ";
+						cout << "- ГЌГ  ГЅГІГ®ГІ ГЅГ«ГҐГ¬ГҐГ­ГІ ГіГЄГ Г§Г»ГўГ ГҐГІ ГЁГІГҐГ°Г ГІГ®Г° ";
 					}
 					catch (std::overflow_error& err) {
 						std::cout << err.what() << std::endl;
@@ -224,7 +224,7 @@ void loop() {
 					break;
 				case 6:
 					try {
-						cout << "Введите значение- " << endl;
+						cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г§Г­Г Г·ГҐГ­ГЁГҐ- " << endl;
 						cin >> h;
 						*iter = h;
 					}
@@ -236,8 +236,8 @@ void loop() {
 					break;
 
 				case 7:
-					if (iter == iterEnd) cout << "Итераторы равны" << endl;
-					else cout << "Итераторы не равны" << endl;
+					if (iter == iterEnd) cout << "Г€ГІГҐГ°Г ГІГ®Г°Г» Г°Г ГўГ­Г»" << endl;
+					else cout << "Г€ГІГҐГ°Г ГІГ®Г°Г» Г­ГҐ Г°Г ГўГ­Г»" << endl;
 					cin.get();
 					cin.get();
 					break;
