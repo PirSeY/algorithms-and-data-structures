@@ -5,52 +5,52 @@ using namespace std;
 
 template<class T> class List {
 private:
-	class Node {//элемент списка
+	class Node {//ГЅГ«ГҐГ¬ГҐГ­ГІ Г±ГЇГЁГ±ГЄГ 
 	public:
-		T element; //значение элемента
-		Node* next; //указатель на следующий элемент списка
+		T element; //Г§Г­Г Г·ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ 
+		Node* next; //ГіГЄГ Г§Г ГІГҐГ«Гј Г­Г  Г±Г«ГҐГ¤ГіГѕГ№ГЁГ© ГЅГ«ГҐГ¬ГҐГ­ГІ Г±ГЇГЁГ±ГЄГ 
 		Node* pred;
-		Node(); //пустой конструктор 
-		Node(const T); //конструктор со значением
-		~Node(); //деструктор
+		Node(); //ГЇГіГ±ГІГ®Г© ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° 
+		Node(const T); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г±Г® Г§Г­Г Г·ГҐГ­ГЁГҐГ¬
+		~Node(); //Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г°
 	};
-	Node* _begin; //указатель на начало списка
-	int _size; //размер списка
-	mutable int _iterations; //количество итераций
+	Node* _begin; //ГіГЄГ Г§Г ГІГҐГ«Гј Г­Г  Г­Г Г·Г Г«Г® Г±ГЇГЁГ±ГЄГ 
+	int _size; //Г°Г Г§Г¬ГҐГ° Г±ГЇГЁГ±ГЄГ 
+	mutable int _iterations; //ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГЁГІГҐГ°Г Г¶ГЁГ©
 	friend class Node;
 	friend class Iterator;
 
 public:
 	class Iterator {
 	public:
-		Node* current; //указатель на элемент списка
-		Iterator(Node*&); //конструктор
-		Iterator(List& lst); //конструктор
-		~Iterator(); //деструктор 
-		Iterator(); //пустой конструктор
-		T& operator* (); //возврат значения 
-		Iterator& operator++(); //перемещение итератора вперёд
-		Iterator& operator--(); //перемещение итератора назад
-		bool operator ==(const Iterator&); //сравнение итераторов на равенство
-		bool operator !=(const Iterator&); //сравнение итераторов на неравенство
+		Node* current; //ГіГЄГ Г§Г ГІГҐГ«Гј Г­Г  ГЅГ«ГҐГ¬ГҐГ­ГІ Г±ГЇГЁГ±ГЄГ 
+		Iterator(Node*&); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
+		Iterator(List& lst); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
+		~Iterator(); //Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г° 
+		Iterator(); //ГЇГіГ±ГІГ®Г© ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г°
+		T& operator* (); //ГўГ®Г§ГўГ°Г ГІ Г§Г­Г Г·ГҐГ­ГЁГї 
+		Iterator& operator++(); //ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГҐ ГЁГІГҐГ°Г ГІГ®Г°Г  ГўГЇГҐГ°ВёГ¤
+		Iterator& operator--(); //ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГҐ ГЁГІГҐГ°Г ГІГ®Г°Г  Г­Г Г§Г Г¤
+		bool operator ==(const Iterator&); //Г±Г°Г ГўГ­ГҐГ­ГЁГҐ ГЁГІГҐГ°Г ГІГ®Г°Г®Гў Г­Г  Г°Г ГўГҐГ­Г±ГІГўГ®
+		bool operator !=(const Iterator&); //Г±Г°Г ГўГ­ГҐГ­ГЁГҐ ГЁГІГҐГ°Г ГІГ®Г°Г®Гў Г­Г  Г­ГҐГ°Г ГўГҐГ­Г±ГІГўГ®
 	};
-	List(); //конструктор списка
-	List(const List&); //конструктор копирования списка
-	~List(); //деструктор списка
-	int size() const; //возврат размера списка
-	void clear(); //очистка списка
-	bool isEmpty() const; //проверка списка на пустоту
-	bool contains(const T&) const; //наличие значения 
-	T get(const int) const; //возврат элемента по позиции
-	void change(const T&, const int);//замена
-	int position(const T&);//возврат позиции
-	void insert(const T&);//вставка
-	void insert(const T&, int);//вставка по позиции
-	void remove(const T&);//удаление элемента
-	void remove_from(const int);//удаление элемента по позиции
-	Iterator& begin();//установка итератора в начало списка
-	Iterator& end();//установка итератора в конец списка
-	void print() const;//вывод списка
+	List(); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° Г±ГЇГЁГ±ГЄГ 
+	List(const List&); //ГЄГ®Г­Г±ГІГ°ГіГЄГІГ®Г° ГЄГ®ГЇГЁГ°Г®ГўГ Г­ГЁГї Г±ГЇГЁГ±ГЄГ 
+	~List(); //Г¤ГҐГ±ГІГ°ГіГЄГІГ®Г° Г±ГЇГЁГ±ГЄГ 
+	int size() const; //ГўГ®Г§ГўГ°Г ГІ Г°Г Г§Г¬ГҐГ°Г  Г±ГЇГЁГ±ГЄГ 
+	void clear(); //Г®Г·ГЁГ±ГІГЄГ  Г±ГЇГЁГ±ГЄГ 
+	bool isEmpty() const; //ГЇГ°Г®ГўГҐГ°ГЄГ  Г±ГЇГЁГ±ГЄГ  Г­Г  ГЇГіГ±ГІГ®ГІГі
+	bool contains(const T&) const; //Г­Г Г«ГЁГ·ГЁГҐ Г§Г­Г Г·ГҐГ­ГЁГї 
+	T get(const int) const; //ГўГ®Г§ГўГ°Г ГІ ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЇГ® ГЇГ®Г§ГЁГ¶ГЁГЁ
+	void change(const T&, const int);//Г§Г Г¬ГҐГ­Г 
+	int position(const T&);//ГўГ®Г§ГўГ°Г ГІ ГЇГ®Г§ГЁГ¶ГЁГЁ
+	void insert(const T&);//ГўГ±ГІГ ГўГЄГ 
+	void insert(const T&, int);//ГўГ±ГІГ ГўГЄГ  ГЇГ® ГЇГ®Г§ГЁГ¶ГЁГЁ
+	void remove(const T&);//ГіГ¤Г Г«ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ 
+	void remove_from(const int);//ГіГ¤Г Г«ГҐГ­ГЁГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЇГ® ГЇГ®Г§ГЁГ¶ГЁГЁ
+	Iterator& begin();//ГіГ±ГІГ Г­Г®ГўГЄГ  ГЁГІГҐГ°Г ГІГ®Г°Г  Гў Г­Г Г·Г Г«Г® Г±ГЇГЁГ±ГЄГ 
+	Iterator& end();//ГіГ±ГІГ Г­Г®ГўГЄГ  ГЁГІГҐГ°Г ГІГ®Г°Г  Гў ГЄГ®Г­ГҐГ¶ Г±ГЇГЁГ±ГЄГ 
+	void print() const;//ГўГ»ГўГ®Г¤ Г±ГЇГЁГ±ГЄГ 
 };
 
 template<class T> List<T>::Node::Node() {
@@ -88,23 +88,23 @@ template<class T> List<T>::Iterator::Iterator(List& lst) {
 }
 
 template<class T> T& List<T>::Iterator::operator*() {
-	if (current == nullptr) throw overflow_error("Итератор не установлен.");
+	if (current == nullptr) throw overflow_error("Г€ГІГҐГ°Г ГІГ®Г° Г­ГҐ ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­.");
 	return current->element;
 }
 
 
 template<class T> typename List<T>::Iterator& List<T>::Iterator::operator++() {
 	if (current == nullptr) {
-		throw overflow_error("Итератор не установлен.");
+		throw overflow_error("Г€ГІГҐГ°Г ГІГ®Г° Г­ГҐ ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­.");
 	}
 	current = current->next;
-	cout << "Итератор передвинут вперёд";
+	cout << "Г€ГІГҐГ°Г ГІГ®Г° ГЇГҐГ°ГҐГ¤ГўГЁГ­ГіГІ ГўГЇГҐГ°ВёГ¤";
 	return *this;
 }
 
 template<class T> typename List<T>::Iterator& List<T>::Iterator::operator--() {
 	if (current == nullptr) {
-		throw overflow_error("Итератор не установлен.");
+		throw overflow_error("Г€ГІГҐГ°Г ГІГ®Г° Г­ГҐ ГіГ±ГІГ Г­Г®ГўГ«ГҐГ­.");
 	}
 	if (current->next != nullptr) {
 		Node* t;
@@ -112,7 +112,7 @@ template<class T> typename List<T>::Iterator& List<T>::Iterator::operator--() {
 		while (t->next != current)
 			t = t->next;
 		current = t;
-		cout << "Итератор передвинут назад";
+		cout << "Г€ГІГҐГ°Г ГІГ®Г° ГЇГҐГ°ГҐГ¤ГўГЁГ­ГіГІ Г­Г Г§Г Г¤";
 		return *this;
 	}
 }
@@ -188,7 +188,7 @@ template<class T> bool List<T>::contains(const T& el) const {
 
 template<class T> T List<T>::get(const int pos) const {
 
-	if (pos > _size || (pos <= 0))  throw overflow_error("Ошибка!Вы ввели неверную позицию.");
+	if (pos > _size || (pos <= 0))  throw overflow_error("ГЋГёГЁГЎГЄГ !Г‚Г» ГўГўГҐГ«ГЁ Г­ГҐГўГҐГ°Г­ГіГѕ ГЇГ®Г§ГЁГ¶ГЁГѕ.");
 	Node* tmp = _begin;
 	for (size_t i = 1; i < pos; i++) tmp = tmp->next;
 	return tmp->element;
@@ -196,7 +196,7 @@ template<class T> T List<T>::get(const int pos) const {
 
 template<class T> void List<T>::change(const T& el, const int pos) {
 	if ((pos > _size) || (pos <= 0)) {
-		throw overflow_error("Ошибка!Вы ввели неверную позицию.");
+		throw overflow_error("ГЋГёГЁГЎГЄГ !Г‚Г» ГўГўГҐГ«ГЁ Г­ГҐГўГҐГ°Г­ГіГѕ ГЇГ®Г§ГЁГ¶ГЁГѕ.");
 	}
 	Node* tmp = _begin;
 	for (size_t i = 1; i < pos; i++) tmp = tmp->next;
@@ -207,7 +207,7 @@ template<class T> int List<T>::position(const T& el) {
 	size_t pos = 1;
 	Node* tmp = _begin;
 	if (_begin == NULL) {
-		throw overflow_error("Список пустой.");
+		throw overflow_error("Г‘ГЇГЁГ±Г®ГЄ ГЇГіГ±ГІГ®Г©.");
 	}
 	while (tmp->next != _begin) {
 		if (tmp->element == el) {
@@ -221,7 +221,7 @@ template<class T> int List<T>::position(const T& el) {
 		_iterations++;
 		return pos;
 	}
-	throw overflow_error("Ошибка!Данного элемента нет в списке.");
+	throw overflow_error("ГЋГёГЁГЎГЄГ !Г„Г Г­Г­Г®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г­ГҐГІ Гў Г±ГЇГЁГ±ГЄГҐ.");
 }
 
 template<class T> void List<T>::insert(const T& el) {
@@ -245,7 +245,7 @@ template<class T> void List<T>::insert(const T& el) {
 
 template<class T> void List<T>::insert(const T& el, int pos) {
 	if ((pos > _size + 1) || (pos <= 0)) {
-		throw overflow_error("Ошибка!Вы ввели неверную позицию.");
+		throw overflow_error("ГЋГёГЁГЎГЄГ !Г‚Г» ГўГўГҐГ«ГЁ Г­ГҐГўГҐГ°Г­ГіГѕ ГЇГ®Г§ГЁГ¶ГЁГѕ.");
 	}
 	else {
 		if (_begin == nullptr) {
@@ -302,7 +302,7 @@ template<class T> void List<T>::insert(const T& el, int pos) {
 
 template<class T> void List<T>::remove(const T& el) {
 	if (_begin == nullptr) {
-		throw overflow_error("Список пустой.");
+		throw overflow_error("Г‘ГЇГЁГ±Г®ГЄ ГЇГіГ±ГІГ®Г©.");
 	}
 	Node* tmp = _begin->next;
 	Node* tmpPrev = _begin;
@@ -342,18 +342,18 @@ template<class T> void List<T>::remove(const T& el) {
 		tmpPrev = tmpPrev->next;
 		tmpNext = tmpNext->next;
 	}
-	throw overflow_error("Ошибка!Данного элемента нет в списке.");
-	cout << "Ошибка!Данного элемента нет в списке" << endl;
+	throw overflow_error("ГЋГёГЁГЎГЄГ !Г„Г Г­Г­Г®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г­ГҐГІ Гў Г±ГЇГЁГ±ГЄГҐ.");
+	cout << "ГЋГёГЁГЎГЄГ !Г„Г Г­Г­Г®ГЈГ® ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г­ГҐГІ Гў Г±ГЇГЁГ±ГЄГҐ" << endl;
 	cin.get();
 	cin.get();
 }
 
 template<class T> void List<T>::remove_from(const int pos) {
 	if (_begin == NULL) {
-		throw overflow_error("Список пустой.");
+		throw overflow_error("Г‘ГЇГЁГ±Г®ГЄ ГЇГіГ±ГІГ®Г©.");
 	}
 	if (pos > _size || pos <= 0)
-		throw overflow_error("Ошибка!Неверная позиция");
+		throw overflow_error("ГЋГёГЁГЎГЄГ !ГЌГҐГўГҐГ°Г­Г Гї ГЇГ®Г§ГЁГ¶ГЁГї");
 	if (pos == 1) {
 		if (_begin->next != _begin) {
 			Node* tmp = _begin;
@@ -392,7 +392,7 @@ template<class T> void List<T>::remove_from(const int pos) {
 
 template<class T> void List<T>::print() const {
 	if (_begin == nullptr)
-		throw overflow_error("Список пустой.");
+		throw overflow_error("Г‘ГЇГЁГ±Г®ГЄ ГЇГіГ±ГІГ®Г©.");
 	else {
 		Node* tmp = _begin;
 		_iterations++;
